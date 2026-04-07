@@ -1,3 +1,4 @@
+
 # envcheck.sh
 
 Script via bash  que verifica se programas essenciais estão instalados no sistema.
@@ -13,3 +14,5 @@ Script via bash  que verifica se programas essenciais estão instalados no siste
 - git
 - python3
 - gcc
+
+#Versão 1.0
