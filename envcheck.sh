@@ -1,8 +1,14 @@
 #!/bin/bash
+
+VERDE='\033[0;32m'
+VERMELHO='\033[0;31m'
+AZUL='\033[0;34m'
+RESET='\033[0m' 
+
 # Adiciona --help
 if [[ "$1" == "--help" ]]; then
-    echo "Uso: ./envcheck.sh"
-    echo "Verifica se git, python3, gcc estão instalados"
+    echo -e  "${AZUL}Uso: ./envcheck.sh${RESET}"
+    echo -e "${AZUL}Verifica se git, python3, gcc estão instalados${RESET}"
     exit 0;
 fi
 
@@ -13,8 +19,8 @@ fi
 
 verificador() {
 for nome in "${meu_array[@]}"; do
-	if command -v "$nome";then echo "${nome} instalado"; 
-        else echo "${nome} não instalado"; 
+	if command -v "$nome" &> /dev/null;then echo -e "${VERDE} ${nome} instalado${RESET}"; 
+        else echo -e  "${VERMELHO}${nome} não instalado${RESET}"; 
         fi 
         done
 
