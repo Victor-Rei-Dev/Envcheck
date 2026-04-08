@@ -1,5 +1,5 @@
 
-# envcheck.sh
+# envcheck
 
 Verifica se programas estão instalados no sistema. Suporta verificação personalizada e tem instalador automático.
 
